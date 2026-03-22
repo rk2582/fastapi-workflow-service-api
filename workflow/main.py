@@ -23,3 +23,4 @@ db_dependency = Annotated[Session, Depends(get_db)]
 @app.get("/")
 async def read_all(db: db_dependency):
     return db.query(Todos).all()
+    
